@@ -25,6 +25,10 @@ section {
   margin-left: -30px;
 }
 
+/* img {
+  z-index: -1;
+} */
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
