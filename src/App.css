@@ -1,8 +1,31 @@
 .App {
   text-align: center;
+  /* background-color: rgb(229, 226, 226); */
 }
 
-.App-logo {
+section {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.section-header {
+  text-align: center;
+  position: relative;
+  margin: 60px 0;
+}
+.section-header:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 60px;
+  height: 1px;
+  background-color: #f39c12;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +58,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
