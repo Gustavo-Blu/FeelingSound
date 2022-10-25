@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 import './navbar.css';
 
 const Navbar = (props) => {
@@ -11,7 +12,22 @@ const Navbar = (props) => {
 
   return (
     <div id="navbar">
-      <div>Hello World</div>
+      <div id="typewriter">
+        <Typewriter
+          options={{
+            loop: true,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString('Luis Feliz')
+              .pauseFor(3000)
+              .deleteAll()
+              .typeString('Feeling Sound')
+              .pauseFor(3000)
+              .start();
+          }}
+        />
+      </div>
       <div
         className="menuToggle"
         style={{
@@ -28,8 +44,11 @@ const Navbar = (props) => {
 };
 
 const Navigation = (props) => {
-  const changeImage = (anything) => {
-    document.getElementById('slider').src = anything;
+  const { toggleMenu } = props;
+  const changeImage = (source, alt) => {
+    const navImage = document.getElementById('slider');
+    navImage.src = source;
+    navImage.alt = alt;
   };
 
   return (
@@ -38,40 +57,55 @@ const Navigation = (props) => {
         <ul>
           <li>
             <a
-              href="#b"
-              onMouseEnter={() => changeImage('/images/soundImage1.png')}
+              href="#intro"
+              onMouseEnter={() =>
+                changeImage('/images/soundImage1.png', 'soundImage1')
+              }
+              onClick={toggleMenu}
             >
               Home
             </a>
           </li>
           <li>
             <a
-              href="#l"
-              onMouseEnter={() => changeImage('/images/soundImage2.webp')}
-            >
-              Sketches
-            </a>
-          </li>
-          <li>
-            <a
-              href="#f"
-              onMouseEnter={() => changeImage('/images/soundImage3.jpg')}
+              href="#process"
+              onClick={toggleMenu}
+              onMouseEnter={() =>
+                changeImage('/images/soundImage3.jpg', 'soundImage3')
+              }
             >
               Process
             </a>
           </li>
           <li>
             <a
-              href="#a"
-              onMouseEnter={() => changeImage('/images/soundImage4.jpg')}
+              href="#sketches"
+              onClick={toggleMenu}
+              onMouseEnter={() =>
+                changeImage('/images/soundImage2.webp', 'soundImage2')
+              }
+            >
+              Sketches
+            </a>
+          </li>
+          <li>
+            <a
+              href="#conclusion"
+              onClick={toggleMenu}
+              onMouseEnter={() =>
+                changeImage('/images/soundImage4.jpg', 'soundImage4')
+              }
             >
               Conclusion
             </a>
           </li>
           <li>
             <a
-              href="#r"
-              onMouseEnter={() => changeImage('/images/soundImage5.webp')}
+              href="#links"
+              onClick={toggleMenu}
+              onMouseEnter={() =>
+                changeImage('/images/soundImage5.webp', 'soundImage5')
+              }
             >
               Links
             </a>

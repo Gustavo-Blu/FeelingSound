@@ -1,0 +1,15 @@
+#links {
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.list {
+  width: 50%;
+  margin-left: 15%;
+  text-align: left;
+}
+
+.list p {
+  margin: 0;
+  font-size: larger;
+}

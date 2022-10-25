@@ -1,8 +1,9 @@
 import React from 'react';
+import './conclusion.css';
 
 const Conclusion = (props) => {
   return (
-    <section>
+    <section id="conclusion">
       <h2 className="section-header">Conclusion</h2>
       <p>
         If I had been given more time, I would’ve organized and developed my

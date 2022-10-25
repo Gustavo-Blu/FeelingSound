@@ -1,13 +1,25 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
 .App {
   text-align: center;
+
   /* background-color: rgb(229, 226, 226); */
+}
+
+p {
+  font-size: large;
 }
 
 section {
   box-sizing: border-box;
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   overflow: hidden;
+  /* background: #fff; */
+  background: rgb(230, 230, 230);
 }
 .section-header {
   text-align: center;
